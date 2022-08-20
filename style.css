@@ -98,7 +98,7 @@ h2 {
 }
 
 .nav-item a {
-  color: #000;
+  color: #00ADB5;
   font-size: 0.9rem;
   font-weight: 400;
   text-decoration: none;
@@ -106,7 +106,7 @@ h2 {
 }
 
 .nav-item a:hover {
-  color: #3498db;
+  color: #EEEEEE;
 }
 
 /* SECTIONS */
