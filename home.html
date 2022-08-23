@@ -33,45 +33,44 @@
 <div class="header" style="text-align: center;">
     <h1>Altania</h1>
 </div>
-<head>
-    <style >
-      body {
-  margin:0px;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#ddd;
-}
-.text-typing {
-  padding:20px 30px;
-  background:#f5f5f5;
-  font-size:35px;
-  font-family:monospace;
-  border-radius:50px;
-}
-.text-typing p {
-  margin:0px;
-  white-space:nowrap;
-  overflow:hidden;
-  animation:typing 4s steps(22,end) forwards,
-            blink 1s infinite;
-}
-@keyframes typing {
-  0% { width:0% }
-  100% { width:100% }
-}
-@keyframes blink {
-  0%,100% {
-    border-right:2px solid transparent;
-  }
-  50% {
-    border-right:2px solid #222;
-  }
-}
+
+    <style>
+        .geeks {
+            width: 20%;
+            top: 50%;
+            position: absolute;
+            left: 40%;
+            border-bottom: 5px solid black;
+            overflow: hidden;
+            animation: animate 2s linear forwards;
+        }
  
+        .geeks h1 {
+            color: black;
+        }
+ 
+        @keyframes animate {
+            0% {
+                width: 0px;
+                height: 0px;
+            }
+            30% {
+                width: 50px;
+                height: 0px;
+            }
+            60% {
+                width: 50px;
+                height: 80px;
+            }
+        }
     </style>
 </head>
+ 
+<body>
+    <div class="geeks">
+        <h1>The Impossible is Reality</h1>
+    </div>
+</body>
 <body class="container" style="margin-top: 50px; width: 50% height:auto; ">
  
 <div class="text-typing">
