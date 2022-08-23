@@ -895,6 +895,7 @@ textarea {
   }
 }
 
+reality {
 .wordContainer {
 	overflow: hidden;
 }
@@ -977,4 +978,5 @@ main {
 }
 .textWrapper .wordContainer:nth-child(3) {
 	clear: both;
+}
 }
