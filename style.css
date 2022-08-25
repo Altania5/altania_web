@@ -78,6 +78,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
+  position: sticky;
   height: 50px;
   overflow: hidden;
 }
