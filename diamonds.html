@@ -48,82 +48,98 @@
 <div class="overlay">
 </div>
 
-<div class="wrapper">
-  <div class="card card-0">
-    <div class="glare-container">
-      <div class="glare">
-      </div>
-    </div>
-  </div>
-
-  <div class="card card-1">
-    <div class="glare-container">
-      <div class="glare">
-      </div>
-    </div>
-  </div>
-
-  <div class="card card-2">
-    <div class="glare-container">
-      <div class="glare">
-      </div>
-    </div>
-  </div>
-
-  <div class="card card-3">
-    <div class="glare-container">
-      <div class="glare">
-      </div>
-    </div>
-  </div>
-
-  <div class="card card-4">
-    <div class="glare-container">
-      <div class="glare">
-        <div>
-          <p>Purple Diamond<p>
-        </div>  
-      </div>
-    </div>
-  </div>
-</div> 
 <script>
-var limits = 15.0;
-
-$(".card").mousemove(function (e) {
-  var rect = e.target.getBoundingClientRect();
-  var x = e.clientX - rect.left; //x position within the element.
-  var y = e.clientY - rect.top; //y position within the element.
-  var offsetX = x / rect.width;
-  var offsetY = y / rect.height;
-
-  var rotateY = (offsetX) * (limits * 2) - limits;
-  var rotateX = (offsetY) * (limits * 2) - limits;
-
-  var shadowOffsetX = (offsetX) * 32 - 16;
-  var shadowOffsetY = (offsetY) * 32 - 16;
-
-  $(this).css({
-    "box-shadow": (1 / 6) * -shadowOffsetX + "px " + (1 / 6) * -shadowOffsetY + "px 3px rgba(0, 0, 0, 0.051), " +
-      (2 / 6) * -shadowOffsetX + "px " + (2 / 6) * -shadowOffsetY + "px 7.2px rgba(0, 0, 0, 0.073), " +
-      (3 / 6) * -shadowOffsetX + "px " + (3 / 6) * -shadowOffsetY + "px 13.6px rgba(0, 0, 0, 0.09), " +
-      (4 / 6) * -shadowOffsetX + "px " + (4 / 6) * -shadowOffsetY + "px 24.3px rgba(0, 0, 0, 0.107), " +
-      (5 / 6) * -shadowOffsetX + "px " + (5 / 6) * -shadowOffsetY + "px 45.5px rgba(0, 0, 0, 0.129), " +
-      -shadowOffsetX + "px " + -shadowOffsetY + "px 109px rgba(0, 0, 0, 0.18)",
-    transform: "perspective(1000px) rotateX(" + -rotateX + "deg) rotateY(" + rotateY + "deg)"
+  var limits = 15.0;
+  
+  $(".card").mousemove(function (e) {
+    var rect = e.target.getBoundingClientRect();
+    var x = e.clientX - rect.left; //x position within the element.
+    var y = e.clientY - rect.top; //y position within the element.
+    var offsetX = x / rect.width;
+    var offsetY = y / rect.height;
+  
+    var rotateY = (offsetX) * (limits * 2) - limits;
+    var rotateX = (offsetY) * (limits * 2) - limits;
+  
+    var shadowOffsetX = (offsetX) * 32 - 16;
+    var shadowOffsetY = (offsetY) * 32 - 16;
+  
+    $(this).css({
+      "box-shadow": (1 / 6) * -shadowOffsetX + "px " + (1 / 6) * -shadowOffsetY + "px 3px rgba(0, 0, 0, 0.051), " +
+        (2 / 6) * -shadowOffsetX + "px " + (2 / 6) * -shadowOffsetY + "px 7.2px rgba(0, 0, 0, 0.073), " +
+        (3 / 6) * -shadowOffsetX + "px " + (3 / 6) * -shadowOffsetY + "px 13.6px rgba(0, 0, 0, 0.09), " +
+        (4 / 6) * -shadowOffsetX + "px " + (4 / 6) * -shadowOffsetY + "px 24.3px rgba(0, 0, 0, 0.107), " +
+        (5 / 6) * -shadowOffsetX + "px " + (5 / 6) * -shadowOffsetY + "px 45.5px rgba(0, 0, 0, 0.129), " +
+        -shadowOffsetX + "px " + -shadowOffsetY + "px 109px rgba(0, 0, 0, 0.18)",
+      transform: "perspective(1000px) rotateX(" + -rotateX + "deg) rotateY(" + rotateY + "deg)"
+    });
+  
+    var glarePos = rotateX + rotateY + 90;
+    $(this)
+      .children()
+      .children()
+      .css("left", glarePos + "%");
   });
+  
+  $(".card").mouseleave(function (e) {
+    $(".card").css({"box-shadow": "0px 0px 3px rgba(0, 0, 0, 0.051), 0px 0px 7.2px rgba(0, 0, 0, 0.073), 0px 0px 13.6px rgba(0, 0, 0, 0.09), 0px 0px 24.3px rgba(0, 0, 0, 0.107), 0px 0px 45.5px rgba(0, 0, 0, 0.129), 0px 0px 109px rgba(0, 0, 0, 0.18)", "transform": "scale(1.0)"});
+    $(".glare").css("left", "100%");
+  });    
+      </script>
 
-  var glarePos = rotateX + rotateY + 90;
-  $(this)
-    .children()
-    .children()
-    .css("left", glarePos + "%");
-});
+<div class="wrapper">
+  <div class="card card-0" style="margin:5%">
+    <div class="glare-container">
+      <h1 style="color:greenyellow;">Green Diamond</h1>
+      <p style="color:rgb(173, 255, 47, 0.7);">Green Diamond is the leader of the Technology and Sciences Department of the Altanian Government. This also gives Green Diamond the
+         position of Chief Operations Officer (COO) of Altanian Industries. Green
+         Diamond is also in the posession of the Malgico Frolalshin Gem.</p>
+      <div class="glare">
+      </div>
+    </div>
+  </div>
 
-$(".card").mouseleave(function (e) {
-  $(".card").css({"box-shadow": "0px 0px 3px rgba(0, 0, 0, 0.051), 0px 0px 7.2px rgba(0, 0, 0, 0.073), 0px 0px 13.6px rgba(0, 0, 0, 0.09), 0px 0px 24.3px rgba(0, 0, 0, 0.107), 0px 0px 45.5px rgba(0, 0, 0, 0.129), 0px 0px 109px rgba(0, 0, 0, 0.18)", "transform": "scale(1.0)"});
-  $(".glare").css("left", "100%");
-});    
-    </script>    
+  <div class="card card-1" style="margin:5%">
+    <div class="glare-container">
+      <h1 style="color:rgb(30, 144, 255);">Blue Diamond</h1>
+      <p style="color:rgb(30, 144, 255, 0.9);">Blue Diamond is the leader of the People First Department. Blue Diamond is in charge of keeping tracks of current and new laws.
+      Review the Politics page to further understand how Altanian politics work. Blue Diamond doesn't make or deny laws, but they do keep track of votes and parties. Blue
+      Diamond is also in the posession of the Frequency Frolalshin Gem.</p>
+      <div class="glare">
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-2" style="margin:5%">
+    <div class="glare-container">
+      <h1 style="color:rgb(255, 215, 0)">King Diamond</h1>
+      <p style="color:rgb(255, 215, 0, 0.7)">King Diamond is the Leader of Altania. They are in charge of the entire country. King Diamond was the founder of Altania. King
+      Diamond is also in the posession of the Altania Frolalshin Gem.</p>
+      <div class="glare">
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-3" style="margin:5%">
+    <div class="glare-container">
+      <h1 style="color:rgb(255, 0, 0)">Red Diamond</h1>
+      <p style="color:rgb(255, 0, 0, 0.7)">Red Diamond is in charge of the Military of Altania. Red Diamond can deploy any branch of the military wherever they desire. 
+        Some branches of the military are The Alexandrite Army, The Nephrite Navy, and The Topaz Troopers. Red
+        Diamond is also in the posession of the Abileration Frolalshin Gem.</p>
+      <div class="glare">
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-4" style="margin:5%">
+    <div class="glare-container">
+      <h1 style="color:rgb(153, 50, 204)">Purple Diamond</h1>
+      <p style="color:rgb(153, 75, 204)">Purple Diamond is in charge of the Economy of Altania. They oversee the currency and everyting that can change the GDP of the Country.
+      They also determin the budget of agencies and departments of the Altanian Government. Purple Diamond is also in the posession of the Balance Frolalshin Gem.</p>
+      <div class="glare">
+      </div>
+    </div>
+  </div>
+</div>     
 
 </html>
