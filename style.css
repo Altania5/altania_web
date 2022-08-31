@@ -1086,7 +1086,7 @@ main {
 }
 
 .page > div {
-  background-image: linear-gradient(to bottom right, #F40076, #342711);
+  background-color: #30BE96;
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
