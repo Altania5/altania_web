@@ -1081,7 +1081,6 @@ main {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 10px;
-  background-image: linear-gradient(to bottom right, #2F80ED, #B2FFDA);
   padding: 10px;
 }
 
