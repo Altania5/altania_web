@@ -1086,7 +1086,7 @@ main {
 }
 
 .page > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-image: linear-gradient(to bottom right, #F40076, #342711);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -1096,7 +1096,6 @@ main {
   grid-row-end:4;
   grid-column-start:1;
   grid-column-end:4;
-  background-image: linear-gradient(to bottom right, #F40076, #342711);
 }
 .gtwo {
   grid-column-start:1;
