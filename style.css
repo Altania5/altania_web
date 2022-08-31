@@ -1095,7 +1095,8 @@ main {
   grid-row-start: 1;
   grid-row-end:4;
   grid-column-start:1;
-  grid-column-end:4
+  grid-column-end:4;
+  background-image: linear-gradient(to bottom right, #F40076, #342711);
 }
 .gtwo {
   grid-column-start:1;
