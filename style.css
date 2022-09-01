@@ -1128,6 +1128,6 @@ main {
 .pie {
   width: 400px;
   height: 400px; 
-  background: conic-gradient(red 205grad, blue 291grad, green 360grad);
+  background: conic-gradient(red 205deg, blue 291deg, green 360deg);
   border-radius: 50%;
       }
