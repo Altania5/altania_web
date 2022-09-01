@@ -1080,7 +1080,7 @@ main {
 .page {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 500px, 500px, 500px;	
+  grid-template-rows: 100px, 500px, 500px, 500px;	
   gap: 10px;
   padding: 10px;
 }
