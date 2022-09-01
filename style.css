@@ -1080,7 +1080,7 @@ main {
 .page {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 100px, 500px, 500px, 500px;	
+  grid-template-rows: 100px, 500px, 500px;
   gap: 10px;
   padding: 10px;
 }
@@ -1099,7 +1099,8 @@ main {
 }
 .gtwo {
   grid-column-start:1;
-  grid-column-end:3
+  grid-column-end:3;
+  height: 200px;
 }
 .gthree {
   grid-column-start:1;
@@ -1120,4 +1121,5 @@ main {
   grid-row-end:7;
   grid-column-start:3;
   grid-column-end:3;
+  height: 500px;
 }
