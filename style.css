@@ -1124,3 +1124,10 @@ main {
   grid-column-end:3;
   height: 500px;
 }
+
+.pie {
+  width: 400px;
+  height: 400px;
+  background: conic-gradient(red 64%, blue 64% 84%, green 84% 94%, black 94%);
+  border-radius: 50%;
+      }
