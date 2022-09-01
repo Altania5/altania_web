@@ -1090,6 +1090,7 @@ main {
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
+  border-radius: 25px;
 }
 .gone {
   grid-row-start: 1;
