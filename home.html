@@ -81,66 +81,16 @@
   <div class="gfour">Empire</div>
   <div class="gfive">Diamond Supporters</div>
   <div class="gsix">Ration of Altanians, Mystarians, and Empire
-    <style>
-    .flower {
-        position: relative;
-        border-radius: 300px;
-        height: 300px;
-        width: 300px;
-        overflow: hidden;
-        margin: auto;
-    }
-
-    .petal {
-        position: absolute;
-        left: 150px;
-        top: -150px;
-        background: yellow;
-        height: 300px;
-        width: 300px;
-        box-shadow: 0 0 60px -5px black;
-        /* transform: rotate(0deg) skewY(-90deg); */
-        transform-origin: bottom left;
-    }
-</style>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script>
-        //Note: pie with center angle > 150deg is not supported
-        //TODO: stack smaller pies to create larger pies to accomodate center angle > 150deg
-        var data = [
-            { weight: 5, color: '#B7D968' },
-            { weight: 3, color: '#B7D968' },
-            { weight: 2, color: '#E04644' },
-            { weight: 1, color: '#E04644' },
-            { weight: 2, color: '#FDE47F' }           
-        ];
-
-        var totalWeight = d3.sum(data, function (e) { return e.weight });
-
-        var pie = d3.pie()
-            .value(function (d) {
-                return d.weight;
-            });
-
-        var petals = pie(data)
-
-        var toDegree = function (radians) { return radians * 180 / Math.PI; }
-
-        d3.selectAll('body')
-            .append('div')
-            .attr('class', 'flower')
-            .selectAll('div')
-            .data(petals)
-            .enter()
-            .append('div')
-            .attr('class', 'petal')
-            .attr('style', function (d) {
-                var theta = d.endAngle - d.startAngle;
-                var transform = 'transform: rotate(' + toDegree(d.startAngle) + 'deg) skewY(' + (toDegree(theta) - 90) + 'deg)';
-                var color = 'background:' + d.data.color;
-                return [transform, color].join(';');
-            });
-    </script>
+      
+          <div class="pie">
+    </div>
+    <div class="labels">
+      <h2>Labels</h2>
+      <p style="color:red;">Item 1: 64%</p>
+      <p style="color:blue;">Item 2: 20%</p>
+      <p style="color:green;">Item 3: 10%</p>
+      <p>Item 4: 6%</p>
+    </div>
     </div>
 </div> 
 </html>
