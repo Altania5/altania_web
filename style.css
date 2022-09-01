@@ -1129,6 +1129,7 @@ main {
   align-items: center;
   height: 300px;
   width: 300px;
+  display: flex;	
   background-color: red; /* For browsers that do not support gradients */
   background-image: conic-gradient(red 0deg, red 205deg, blue 205deg, blue 291deg, green 291deg, green 360deg);
   border-radius: 50%;
