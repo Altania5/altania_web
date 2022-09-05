@@ -1076,3 +1076,91 @@ main {
   align-items: center;
   height: 100vh;
 }
+
+.page {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 100px, 500px, 500px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.page > div {
+  background-color: #393E46;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  border-radius: 25px;
+}
+.gone {
+  grid-row-start: 1;
+  grid-row-end:4;
+  grid-column-start:1;
+  grid-column-end:4;
+}
+.gtwo {
+  grid-column-start:1;
+  grid-column-end:3;
+  height: 200px;
+}
+.gthree {
+  grid-column-start:1;
+  grid-column-end:3;
+}
+.gfour {
+  grid-column-start:1;
+  grid-column-end:3;
+}
+.gfive {
+  grid-row-start: 4;
+  grid-row-end:4;
+  grid-column-start:3;
+  grid-column-end:3;
+}
+.gsix {
+  grid-row-start: 5;
+  grid-row-end:7;
+  grid-column-start:3;
+  grid-column-end:3;
+  height: 500px;
+}
+
+.pie {
+  align-items: center;
+  margin-top: 30px;
+  margin-left:100px;
+  height: 300px;
+  width: 300px;
+  display: flex;	
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red 0deg, red 205deg, blue 205deg, blue 291deg, green 291deg, green 360deg);
+  border-radius: 50%;
+      }
+
+.firm {
+  border-style: inset;
+  border-radius:10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: -50px;
+  margin-top: 70px;
+  border-image: -webkit-linear-gradient(left, red 0%,red 20%,green 
+  20%,green 20%,green 40%,blue 40%,blue 40%,green 40%,blue 
+  40%,blue 40%,blue 60%,green 60%,green 80%,red 80%,red
+  80%,red 100%) 1 stretch repeat;
+  background: linear-gradient(-45deg, red, blue, green);
+	animation-name: bobber;
+  animation-duration:  15s ease infinite;
+}
+
+@keyframes bobber {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
